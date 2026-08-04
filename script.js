@@ -80,9 +80,7 @@ console.log("チェック", member.name, used);
 
 <div class="member-card ${used ? "used-member" : ""}"
 id="${member.id}-card"
-onclick="${used ? "" : `selectMember('${member.name}','${member.group}','${member.image}','${member.id}-card')`}">
-
-
+onclick="${used ? "" : `selectMember(${JSON.stringify(member.name)},${JSON.stringify(member.group)},${JSON.stringify(member.image)},${JSON.stringify(member.id + "-card")})`}"
       <img src="${member.image}">
 
 
