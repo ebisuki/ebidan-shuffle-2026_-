@@ -62,7 +62,11 @@ if(!data){
     `
     <div class="result-member">
 
-      <img src="${member.image}">
+      <img 
+src="${member.image}"
+class="save-member-image"
+width="55"
+height="55">
 
       <p>
       ${member.name}
@@ -195,14 +199,12 @@ let html = `
 
         <div class="save-member">
 
-          <img src="${member.image}">
+  <img 
+src="${member.image}"
+class="save-member-image"
+crossorigin="anonymous">
 
-          <p>
-          ${member.name}<br>
-          <span>${member.group}</span>
-          </p>
-
-        </div>
+</div>
 
         `;
 
@@ -234,11 +236,6 @@ let html = `
       <h2>
       ${unit.name}
       </h2>
-
-
-      <p>
-      ${unit.group}
-      </p>
 
 
       <div class="save-member-grid">
@@ -340,11 +337,14 @@ function saveImage(){
 
   html2canvas(area, {
 
-    scale: 2,
+  scale: 2,
 
-    backgroundColor: null
+  backgroundColor: null,
 
-  }).then(canvas => {
+  useCORS: true
+
+})
+.then(canvas => {
 
 
     const link =

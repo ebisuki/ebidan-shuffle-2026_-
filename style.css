@@ -1340,3 +1340,103 @@ a{
   text-align:center;
 
 }
+
+/* ユニット内メンバー3×3 */
+
+#save-image-area .save-member-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(3, 1fr);
+
+  gap:10px;
+
+}
+
+
+#save-image-area .save-member {
+
+  text-align:center;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+}
+
+
+/* メンバー画像 */
+
+#save-image-area .save-member img {
+
+  width:55px;
+
+  height:55px;
+
+  aspect-ratio:1 / 1;
+
+  object-fit:cover;
+
+  object-position:center;
+
+  border-radius:50%;
+
+}
+
+#save-image-area .save-member img {
+
+  width:55px !important;
+
+  height:55px !important;
+
+  max-width:none !important;
+
+  object-fit:cover !important;
+
+  border-radius:50% !important;
+
+}
+
+#save-image-area .save-member-image {
+
+  width:55px;
+
+  height:55px;
+
+  display:block;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+}
+
+#save-image-area .save-member-image {
+
+  width:55px !important;
+
+  height:55px !important;
+
+  max-width:55px !important;
+
+  max-height:55px !important;
+
+  object-fit:cover !important;
+
+}
+
+#save-image-area .save-member-image {
+
+  width:55px;
+  height:55px;
+
+  object-fit:cover;
+  object-position:center;
+
+  border-radius:50%;
+
+  display:block;
+
+}
