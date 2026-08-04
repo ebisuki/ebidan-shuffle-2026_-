@@ -401,7 +401,7 @@ const members = [
 
 {
   id: "icex_takeno",
-  name: "竹野世梧",
+  name: "竹野世梛",
   group: "ICEx",
   image: "images/icex_takeno.jpg"
 },
