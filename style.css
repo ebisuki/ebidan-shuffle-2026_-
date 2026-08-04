@@ -1308,3 +1308,17 @@ a{
   margin:0 0 5px;
 
 }
+
+/* 画像保存用 メンバー画像 */
+
+#save-image-area .save-member img {
+
+  width:60px;
+
+  height:60px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+}
