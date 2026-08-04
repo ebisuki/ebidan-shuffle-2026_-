@@ -1322,3 +1322,21 @@ a{
   object-fit:cover;
 
 }
+/* ユニット内メンバー3×3 */
+
+#save-image-area .save-member-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(3, 1fr);
+
+  gap:10px;
+
+}
+
+
+#save-image-area .save-member {
+
+  text-align:center;
+
+}
