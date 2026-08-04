@@ -1147,3 +1147,164 @@ a{
   display:block;
   margin:20px auto;
 }
+
+/* =====================
+   画像保存用デザイン
+===================== */
+
+/* 画像全体 */
+#save-image-area {
+
+  width: 794px;
+  height: 1123px;
+
+  background: white;
+
+  box-sizing: border-box;
+
+  padding: 35px;
+
+  text-align: center;
+
+}
+
+
+/* メインタイトル */
+#save-image-area .save-title {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  margin: 0 0 15px;
+
+  line-height: 1.4;
+
+}
+
+
+/* サブタイトル */
+#save-image-area .save-subtitle {
+
+  font-size: 16px;
+
+  margin: 0 0 30px;
+
+}
+
+/* 画像保存用エリアは通常非表示 */
+#save-image-area {
+
+  position: absolute;
+  left: -9999px;
+
+}
+
+/* =====================
+   画像保存用 背景
+===================== */
+
+#save-image-area {
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffd6e8,
+    #d9ecff
+  );
+
+}
+
+/* =====================
+   画像保存タイトル
+===================== */
+
+.save-title {
+
+  text-align:center;
+
+  font-size:32px;
+
+  font-weight:bold;
+
+  color:white;
+
+  padding:30px 15px 10px;
+
+  line-height:1.4;
+
+  text-shadow:
+  2px 2px 5px rgba(0,0,0,0.25);
+
+}
+
+
+.save-subtitle {
+
+  text-align:center;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+  color:white;
+
+  padding-bottom:25px;
+
+}
+
+/* =====================
+   ユニット9個配置
+===================== */
+
+.save-unit-grid {
+
+  display:grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap:15px;
+
+}
+
+
+.save-unit {
+
+  background:white;
+
+  border-radius:15px;
+
+  padding:10px;
+
+  box-sizing:border-box;
+
+  min-height:260px;
+
+}
+
+/* ユニット名 */
+
+#save-image-area .save-unit h2 {
+
+  font-size:18px;
+
+  white-space:nowrap;
+
+  margin:5px 0;
+
+}
+
+/* ユニット名・グループ名の間隔 */
+
+#save-image-area .save-unit h2 {
+
+  margin:5px 0 0;
+
+}
+
+
+#save-image-area .save-unit p {
+
+  margin:0 0 5px;
+
+}

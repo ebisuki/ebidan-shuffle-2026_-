@@ -126,7 +126,141 @@ ${songs}
 
 
 };
+function createSaveImageArea(){
 
+  const saveArea =
+  document.getElementById("save-image-area");
+
+
+  const nameInput =
+document.getElementById("user-name");
+
+
+const userName =
+nameInput.value.trim() || "あなた";
+
+
+let html = `
+
+<div class="save-title">
+
+🎯EBiDAN THE LIVE 2026　シャッフル大予想🎯
+
+</div>
+
+
+<div class="save-subtitle">
+
+「${userName}」が考えるユニットはこれだ！
+
+</div>
+
+
+<div class="save-unit-grid">
+
+`;
+
+  for(let i = 1; i <= 9; i++){
+
+
+    const data =
+    JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
+      members: [],
+      songs: []
+    };
+
+
+    const unit =
+    unitData[`unit${i}`];
+
+
+    let members = "";
+
+
+    const memberList =
+    data.members || data;
+
+
+    for(let j = 0; j < 9; j++){
+
+
+      const member =
+      memberList[j];
+
+
+      if(member){
+
+
+        members += `
+
+        <div class="save-member">
+
+          <img src="${member.image}">
+
+          <p>
+          ${member.name}<br>
+          <span>${member.group}</span>
+          </p>
+
+        </div>
+
+        `;
+
+
+      }else{
+
+
+        members += `
+
+        <div class="save-member empty">
+
+        </div>
+
+        `;
+
+
+      }
+
+
+    }
+
+
+
+    html += `
+
+    <div class="save-unit">
+
+
+      <h2>
+      ${unit.name}
+      </h2>
+
+
+      <p>
+      ${unit.group}
+      </p>
+
+
+      <div class="save-member-grid">
+
+      ${members}
+
+      </div>
+
+
+    </div>
+
+
+    `;
+
+
+  }
+
+html += `</div>`;
+  saveArea.innerHTML = html;
+
+
+}
 function savePDF(){
 
   const nameInput =
@@ -188,3 +322,55 @@ function shareX(){
   window.open(url, "_blank");
 
 }
+// =====================
+// 画像保存
+// =====================
+
+function saveImage(){
+
+
+  // 画像用エリアを作成
+  createSaveImageArea();
+
+
+  const area =
+  document.getElementById("save-image-area");
+
+
+
+  html2canvas(area, {
+
+    scale: 2,
+
+    backgroundColor: null
+
+  }).then(canvas => {
+
+
+    const link =
+    document.createElement("a");
+
+
+    link.download =
+    "EBiDANシャッフル予想結果.png";
+
+
+    link.href =
+    canvas.toDataURL("image/png");
+
+
+    link.click();
+
+
+  });
+
+
+}
+
+
+
+// ボタン接続
+
+document
+.getElementById("save-image-button")
+.addEventListener("click", saveImage);
