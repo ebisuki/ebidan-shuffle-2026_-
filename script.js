@@ -219,8 +219,8 @@ function updateSelectedArea(){
       area.innerHTML += `
 
 
-      <div class="member-card selected-card">
-
+      <div class="member-card selected-card"
+onclick="selectMember('${selectedMembers[i].name}','${selectedMembers[i].group}','${selectedMembers[i].image}','${selectedMembers[i].id}')">
 
         <img src="${selectedMembers[i].image}">
 
