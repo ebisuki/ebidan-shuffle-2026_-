@@ -17,13 +17,10 @@ for(let i = 1; i <= 9; i++){
 
 
   const data =
-  JSON.parse(localStorage.getItem(`unit${i}Members`));
-
-
-  if(!data){
-    continue;
-  }
-
+JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
+  members: [],
+  songs: []
+};
 
 
   const unit =
