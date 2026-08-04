@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>PUNNiiS メンバー予想</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+<div class="unit-title">
+<h1>
+💎 PUNNiiS
+</h1>
+
+<p>
+（BUDDiiS）
+</p>
+</div>
+<h2>
+🎵 曲予想（最大2曲）
+</h2>
+
+
+<div class="song-area">
+
+<input 
+type="text"
+id="song1"
+placeholder="1曲目">
+
+
+<input 
+type="text"
+id="song2"
+placeholder="2曲目">
+
+
+</div>
+<h2>
+選択したメンバー
+</h2>
+
+<div class="selected-area">
+
+  <div id="selected-area" class="selected-grid">
+
+  <div class="empty-slot"></div>
+  <div class="empty-slot"></div>
+  <div class="empty-slot"></div>
+
+  <div class="empty-slot"></div>
+  <div class="empty-slot"></div>
+  <div class="empty-slot"></div>
+
+  <div class="empty-slot"></div>
+  <div class="empty-slot"></div>
+  <div class="empty-slot"></div>
+
+</div>
+
+  <p id="remaining-count">
+    0 / 9 人選択中
+  </p>
+
+</div>
+<button onclick="saveUnit()">
+保存する
+</button>
+
+<h2>
+メンバー一覧
+</h2>
+
+<div id="member-list" class="member-list"></div>
+
+<script src="members.js"></script>
+<script src="unitData.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>

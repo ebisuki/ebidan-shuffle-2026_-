@@ -1,0 +1,1286 @@
+body {
+  margin: 0;
+  padding: 30px 20px;
+  font-family: "Arial", "Hiragino Kaku Gothic ProN", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #fff5fb, #f5f8ff);
+  color: #444;
+}
+
+
+h1 {
+  font-size: 28px;
+  line-height: 1.5;
+  margin-top: 50px;
+  color: #333;
+}
+
+
+p {
+  margin: 30px 0;
+  font-size: 16px;
+}
+
+
+/* ボタン */
+button {
+  width: 220px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff9fcf, #a8d8ff);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* ユニットカード */
+.unit-card {
+  background: rgba(255,255,255,0.9);
+  margin: 20px auto;
+  padding: 25px 15px;
+  width: 80%;
+  border-radius: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+.unit-card h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+
+.unit-card p {
+  margin: 5px 0 20px;
+  color: #888;
+}
+
+
+/* メンバー共通カード */
+.member-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 5px;
+}
+
+
+.member-card img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.member-name {
+  margin: 5px 0 2px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
+.group-name {
+  margin: 0;
+  font-size: 10px;
+  white-space: nowrap;
+  transform: scale(0.9);
+}
+
+
+/* 選択中の枠 */
+.selected {
+  border: 4px solid pink;
+  box-shadow: 0 0 15px pink;
+}
+
+
+/* =================
+   選択したメンバー
+================= */
+
+.selected-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 15px;
+  justify-content: center;
+}
+
+
+.selected-grid .member-card {
+  width: 90px;
+  padding: 5px;
+}
+
+
+.selected-grid .member-card p {
+  font-size: 11px;
+  margin: 5px 0;
+}
+
+
+/* =================
+   メンバー一覧
+================= */
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  justify-items: center;
+}
+
+
+.member-list .member-card {
+  width: 100px;
+  padding: 8px;
+}
+
+
+.member-list .member-card p {
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.empty-slot {
+  width: 90px;
+  height: 120px;
+  border: 2px dashed #ddd;
+  border-radius: 15px;
+}
+
+/* 選択エリアのカードサイズ固定 */
+.selected-grid .member-card {
+  width: 90px;
+  height: 120px;
+  padding: 5px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* 選択後の画像サイズ */
+.selected-grid .member-card img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  object-position: top;
+}
+
+
+/* 選択後の名前 */
+.selected-grid .member-name {
+  font-size: 10px;
+  margin: 3px 0 0;
+}
+
+
+/* 選択後のグループ名 */
+.selected-grid .group-name {
+  font-size: 8px;
+  margin: 0;
+}
+
+
+/* 空枠 */
+.empty-slot {
+  width: 90px;
+  height: 120px;
+  border: 2px dashed #ddd;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.selected-grid .member-card p {
+  padding: 0;
+  line-height: 1.1;
+}
+
+
+.selected-grid .member-name {
+  font-size: 10px;
+  margin: 2px 0 0;
+}
+
+
+.selected-grid .group-name {
+  font-size: 8px;
+  margin: 0;
+}
+
+/* メンバー一覧の文字をコンパクトに */
+.member-list .member-card p {
+  margin: 2px 0;
+  line-height: 1.1;
+}
+
+
+.member-list .member-name {
+  font-size: 13px;
+}
+
+
+.member-list .group-name {
+  font-size: 10px;
+}
+
+.unit-list {
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+}
+
+/* ユニット一覧 3×3 */
+.unit-list {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.unit-list .unit-card {
+  padding: 10px 5px;
+}
+
+
+.unit-list .unit-card {
+  width: auto;
+  margin: 0;
+  padding: 15px 5px;
+  border-radius: 20px;
+}
+
+
+/* ユニット名 */
+.unit-list .unit-card h2 {
+  font-size: 15px;
+}
+
+
+/* グループ名 */
+.unit-list .unit-card p {
+  font-size: 11px;
+}
+
+/* ユニット一覧のボタン調整 */
+.unit-list .unit-card button {
+  width: 90px;
+  padding: 8px 2px;
+  font-size: 11px;
+  border-radius: 15px;
+}
+
+.unit-list .unit-card {
+  padding: 10px;
+}
+
+
+.unit-list .unit-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.unit-list .unit-card h2 {
+  font-size: 13px;
+  margin: 5px 0 0;
+  white-space: nowrap;
+}
+
+
+.unit-list .unit-card p {
+  font-size: 10px;
+  margin: 2px 0;
+  white-space: nowrap;
+}
+
+/* =====================
+   ユニット一覧ページ
+===================== */
+
+
+.unit-list {
+
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+
+  justify-content: center;
+  margin: 20px auto;
+
+}
+
+
+
+.unit-list .unit-card {
+
+  width: 100px;
+  padding: 8px 5px;
+  margin: 0;
+
+  border-radius: 18px;
+
+  box-sizing: border-box;
+
+}
+
+
+
+.unit-list .unit-card img {
+
+  width: 100%;
+  height: 100px;
+
+  object-fit: contain;
+
+}
+
+
+
+.unit-list .unit-group {
+
+  font-size: 10px;
+
+  margin: 5px 0;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+
+}
+
+
+
+.unit-list .unit-card button {
+
+  width: 90px;
+
+  padding: 7px 2px;
+
+  font-size: 10px;
+
+  border-radius: 15px;
+
+}
+
+.unit-image {
+
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.unit-image img {
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+
+}
+
+.progress-area{
+  margin:10px 0;
+}
+
+
+.progress-bar{
+
+  width:100%;
+  height:8px;
+
+  background:#eee;
+
+  border-radius:10px;
+
+  overflow:hidden;
+
+}
+
+
+.progress-fill{
+
+  height:100%;
+
+  width:0%;
+
+  background:#ff9fcf;
+
+  border-radius:10px;
+
+}
+
+
+.progress-area p{
+
+  font-size:10px;
+
+  margin:5px 0;
+
+}
+
+/* 完成カード */
+
+.unit-card.complete{
+
+  background: #f3f3f3;
+
+}
+
+.total-progress{
+
+  width:80%;
+  margin:20px auto;
+
+}
+
+
+.total-progress p{
+
+  margin:8px 0;
+
+}
+
+.submit-area{
+
+  margin:40px auto 20px;
+
+}
+
+
+.submit-area button{
+
+  width:220px;
+
+}
+
+
+#submit-message{
+
+  font-size:14px;
+
+  color:#888;
+
+}
+
+.submit-area{
+
+  margin:40px auto 20px;
+
+}
+
+
+.submit-area .disabled{
+
+  background:#ccc;
+
+  box-shadow:none;
+
+  cursor:pointer;
+
+}
+
+
+#submit-message{
+
+  margin-bottom:15px;
+
+  font-size:14px;
+
+  color:#888;
+
+}
+
+/* 提出ボタン 未完成 */
+
+#submit-button.disabled{
+  box-shadow:none;
+}
+
+  background: #ccc;
+
+  color: #888;
+
+  cursor: not-allowed;
+
+  opacity: 0.7;
+
+
+}
+
+.result-unit{
+
+border:2px solid #333;
+
+border-radius:20px;
+
+padding:20px;
+
+margin:20px auto;
+
+max-width:600px;
+
+}
+
+
+/* 結果ページ */
+
+.result-unit h2{
+
+text-align:center;
+
+margin:0;
+
+}
+
+
+.result-unit h3{
+
+text-align:center;
+
+margin:5px 0 20px;
+
+}
+
+
+.result-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+}
+
+
+.result-member{
+
+text-align:center;
+
+}
+
+
+.result-member img{
+
+width:90px;
+
+height:90px;
+
+object-fit:cover;
+
+object-position:center top;
+
+border-radius:50%;
+
+}
+
+
+.member-name{
+
+margin:5px 0 0;
+
+font-size:14px;
+
+}
+
+
+.member-group{
+
+margin:0;
+
+font-size:11px;
+
+}
+
+.unit-title p{
+
+  margin-top:5px;
+
+  margin-bottom:20px;
+
+}
+
+
+.unit-title h1{
+
+  margin-bottom:0;
+
+}
+
+/* =====================
+   結果ページ調整
+===================== */
+
+.result-unit {
+
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 15px;
+
+  margin: 15px auto;
+
+  max-width: 650px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+/* ユニット名 */
+
+.result-unit h2 {
+
+  margin: 0;
+
+  font-size: 22px;
+
+}
+
+
+
+/* 元グループ名 */
+
+.result-unit h3 {
+
+  margin: 2px 0 8px;
+
+  font-size: 14px;
+
+  color: #888;
+
+}
+
+
+
+/* 曲名 */
+
+.result-song {
+
+  margin: 5px 0 12px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  color: #ff7fb8;
+
+}
+
+
+
+/* メンバー3×3 */
+
+.result-grid {
+
+  display:grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+  
+justify-content:center;
+
+}
+
+
+
+/* メンバー */
+
+.result-member {
+
+  text-align:center;
+
+}
+
+
+
+/* 写真 */
+
+.result-member img {
+
+  width:75px;
+
+  height:75px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  object-position:top;
+
+}
+
+
+
+/* 名前 */
+
+.result-member p {
+
+  margin:3px 0 0;
+
+  font-size:12px;
+
+}
+
+/* 結果ページ 文字間隔調整 */
+
+.result-unit p {
+  margin: 3px 0;
+}
+
+
+.result-unit h2 {
+  margin: 0 0 3px;
+}
+
+
+.result-unit h3 {
+  margin: 0 0 5px;
+}
+
+/* ===== 結果ページ最終調整 ===== */
+
+.result-unit{
+  padding:15px;
+}
+
+
+.result-unit h2{
+  margin:0;
+  line-height:1.2;
+}
+
+
+.result-unit h3{
+  margin:0 0 5px;
+  line-height:1.2;
+}
+
+
+.result-song{
+  margin:5px 0 10px;
+  line-height:1.2;
+}
+
+
+.result-grid{
+  gap:5px;
+}
+
+
+.result-member img{
+  width:70px;
+  height:70px;
+}
+
+
+.result-member p{
+  margin:2px 0 0;
+  line-height:1.1;
+}
+/* 結果ページ 上部間隔調整 */
+
+.result-unit > p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+
+.result-unit h2 {
+  margin-bottom: 0;
+}
+
+
+.result-unit h3 {
+  margin: 0;
+}
+
+
+.result-song {
+  margin: 3px 0;
+}
+
+/* 曲表示 */
+
+.result-song{
+
+  background:#fff0f7;
+
+  border-radius:15px;
+
+  padding:8px 12px;
+
+  margin:8px auto 15px;
+
+  width:fit-content;
+
+  font-weight:bold;
+
+  line-height:1.6;
+
+}
+
+#submit-button.disabled {
+  background:#ccc !important;
+  color:#888 !important;
+  box-shadow:none !important;
+  opacity:0.7;
+}
+
+ /* 結果カード デザイン調整 */
+
+.result-unit{
+
+  border: none;
+
+  background: rgba(255,255,255,0.95);
+
+  border-radius:25px;
+
+  padding:20px;
+
+  margin:25px auto;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+}
+
+.ranking-card{
+  background:white;
+  border-radius:25px;
+  padding:20px;
+  margin:20px auto;
+  width:85%;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+.ranking-item{
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:10px 0;
+
+  border-bottom:1px solid #eee;
+
+}
+
+
+.ranking-item img{
+
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position: top;
+
+}
+
+
+.ranking-name{
+
+  flex:1;
+  text-align:left;
+
+}
+
+
+.ranking-vote{
+
+  font-weight:bold;
+
+}
+
+/* 選択済みメンバー */
+
+.used-member{
+
+  opacity:0.5;
+  pointer-events:none;
+
+}
+
+.unit-ranking[open] .toggle-mark{
+  font-size:0;
+}
+
+
+.unit-ranking[open] .toggle-mark::after{
+  content:"−";
+  font-size:24px;
+}
+
+/* ランキング アコーディオン見出し */
+
+.unit-ranking{
+  background:white;
+  border-radius:25px;
+  margin:20px auto;
+  width:90%;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  overflow:hidden;
+}
+
+
+.unit-summary{
+  white-space:nowrap;
+
+  padding:20px;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  list-style:none;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+
+/* 標準の▶を消す */
+
+.unit-summary::-webkit-details-marker{
+  display:none;
+}
+
+.unit-summary::marker{
+  display:none;
+}
+
+
+/* 開いた時の中身 */
+
+.ranking-card{
+
+  width:auto;
+
+  margin:0;
+
+  border-radius:0;
+
+  box-shadow:none;
+
+  padding:20px;
+
+}
+
+.unit-name{
+  font-size:18px;
+  font-weight:bold;
+}
+
+
+.unit-group{
+  font-size:10px;
+  color:#888;
+  margin-left:4px;
+  white-space:nowrap;
+}
+
+.unit-ranking{
+  width:calc(100% - 10px);
+  max-width:650px;
+  box-sizing:border-box;
+}
+
+
+.unit-ranking .ranking-card{
+  width:100%;
+  box-sizing:border-box;
+  margin:0;
+}
+
+/* =====================
+   下部ボタン調整
+===================== */
+
+.ranking-buttons button,
+.submit-area button {
+
+  width:200px;
+  padding:10px;
+  font-size:15px;
+  margin:10px auto;
+  display:block;
+
+}
+
+.result-buttons{
+  margin:30px auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px;
+}
+
+
+.result-buttons button{
+  width:220px;
+  padding:10px;
+  font-size:14px;
+  border-radius:20px;
+}
+
+@media print {
+
+  .result-buttons,
+  .ranking-buttons {
+
+    display:none;
+
+  }
+
+}
+
+@media print {
+
+
+  /* 横向き */
+  @page {
+    size: landscape;
+    margin: 10mm;
+  }
+
+
+  /* ボタン類を消す */
+  .result-buttons,
+  .ranking-buttons {
+    display:none;
+  }
+
+
+  /* タイトル調整 */
+  .result-title {
+    display:block;
+    text-align:center;
+    margin-bottom:20px;
+  }
+
+
+  /* 3×3配置 */
+  .result-grid {
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap:15px;
+
+  }
+
+
+}
+
+@media print {
+
+  /* 横向き */
+  @page {
+    size: landscape;
+    margin: 15mm;
+  }
+
+
+  /* タイトル */
+  body::before {
+
+    content:
+    "👑 EBiDAN THE LIVE 2026\Aシャッフル予想結果";
+
+    white-space: pre;
+
+    display:block;
+
+    text-align:center;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+  }
+
+
+  /* ボタン非表示 */
+  button,
+  .result-buttons,
+  a {
+    display:none !important;
+  }
+
+
+  /* ユニット9個を3×3 */
+  #result-area {
+
+    display:grid;
+
+    grid-template-columns:repeat(3, 1fr);
+
+    gap:15px;
+
+    width:100%;
+
+  }
+
+
+  /* カード調整 */
+  .result-unit {
+
+    margin:0;
+
+    padding:10px;
+
+    box-shadow:none;
+
+    break-inside:avoid;
+
+  }
+
+
+}
+
+.empty-member{
+  text-align:center;
+  color:#aaa;
+  padding:20px;
+  grid-column:1 / -1;
+}
+
+#save-area .result-member img{
+
+  width:90px;
+  height:110px;
+
+  border-radius:15px;
+
+  object-fit:cover;
+
+  object-position:top;
+
+}
+
+/* 画像保存用 9ユニット3×3 */
+
+#save-area #result-area{
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+
+}
+
+
+
+#save-area .result-unit{
+
+  aspect-ratio:1 / 1;
+
+  padding:10px;
+
+  margin:0;
+
+  box-sizing:border-box;
+
+  border-radius:20px;
+
+  background:white;
+
+}
+
+
+
+/* ユニット名 */
+
+#save-area .result-unit h2{
+
+  font-size:14px;
+
+  margin:0;
+
+}
+
+
+
+/* グループ名 */
+
+#save-area .result-group{
+
+  font-size:10px;
+
+  margin:2px 0;
+
+}
+
+
+
+/* 曲 */
+
+#save-area .result-song{
+
+  font-size:10px;
+
+  padding:3px;
+
+  margin:3px auto;
+
+}
+
+
+
+/* メンバー配置 */
+
+#save-area .result-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:3px;
+
+}
+
+
+
+#save-area .result-member img{
+
+  width:100%;
+
+  aspect-ratio:1 / 1;
+
+  height:auto;
+
+  border-radius:8px;
+
+}
+
+
+
+#save-area .result-member p{
+
+  font-size:8px;
+
+  margin:0;
+
+}
