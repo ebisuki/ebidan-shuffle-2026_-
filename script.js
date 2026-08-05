@@ -83,7 +83,7 @@ id="${member.id}-card"
 onclick="${used ? "" : `selectMember('${member.name}','${member.group.replace(/'/g,"\\'")}','${member.image}','${member.id}-card')`}">
 
 
-      <img src="${member.image}">
+      <img src="${member.image}" draggable="false">
 
 
       <p class="member-name">
@@ -223,7 +223,7 @@ function updateSelectedArea(){
 onclick="selectMember('${selectedMembers[i].name}','${selectedMembers[i].group.replace(/'/g,"\\'")}','${selectedMembers[i].image}','${selectedMembers[i].id}')">
 
 
-        <img src="${selectedMembers[i].image}">
+        <img src="${selectedMembers[i].image}" draggable="false">
 
 
         <p class="member-name">
