@@ -449,3 +449,139 @@ window.onload = function(){
 
 
 };
+
+// =========================
+// 曲名検索用 正規化
+// =========================
+
+function normalizeSongText(text){
+
+  return text
+    .normalize("NFKC")
+    .toLowerCase();
+
+}
+
+// =========================
+// 曲名予測変換
+// =========================
+
+function setupSongSuggest(inputId, suggestId){
+
+  const input =
+  document.getElementById(inputId);
+
+
+  const suggest =
+  document.getElementById(suggestId);
+
+
+  if(!input || !suggest){
+    return;
+  }
+
+
+
+  const currentGroup =
+  currentUnit.group;
+
+
+
+  const songs =
+  songData[currentGroup] || [];
+
+
+
+  input.addEventListener("input", function(){
+
+
+    const keyword =normalizeSongText(input.value.trim());
+
+
+    suggest.innerHTML = "";
+
+
+if(!keyword){
+  suggest.classList.remove("active");
+  return;
+}
+
+
+
+    const results = [
+
+  ...songs.filter(song =>
+    normalizeSongText(song).startsWith(keyword)
+  ),
+
+  ...songs.filter(song =>
+    !normalizeSongText(song).startsWith(keyword) &&
+    normalizeSongText(song).includes(keyword)
+  )
+
+];
+
+
+results.forEach(song => {
+
+
+      const item =
+      document.createElement("div");
+
+
+      item.className =
+      "song-suggest-item";
+
+
+      item.textContent =
+      song;
+
+
+
+      item.onclick = function(){
+
+
+        input.value =
+        song;
+
+
+        suggest.innerHTML =
+        "";
+
+
+      };
+
+
+
+      suggest.appendChild(item);
+      suggest.classList.add("active");
+
+
+    });
+
+
+  });
+
+
+
+}
+
+
+
+
+window.addEventListener("load", function(){
+
+
+  setupSongSuggest(
+    "song1",
+    "song1-suggestions"
+  );
+
+
+  setupSongSuggest(
+    "song2",
+    "song2-suggestions"
+  );
+
+
+});

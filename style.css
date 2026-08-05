@@ -1282,3 +1282,39 @@ body::before {
   -webkit-user-drag: none;
   pointer-events: none;
 }
+
+/* 曲名予測変換（サジェスト表示） */
+
+.song-input-area {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.song-input-area input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.song-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: white;
+  z-index: 100;
+}
+
+
+.song-suggest-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+
+.song-suggest-item:hover {
+  background: #f5f5f5;
+}
