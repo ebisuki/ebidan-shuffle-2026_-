@@ -617,7 +617,6 @@ a {
 }
 
 
-
 /* =====================
    メンバー3×3
 ===================== */
@@ -1264,4 +1263,13 @@ body::before {
 
   object-position:center top;
 
+}
+
+
+/* 名前入力 注意書き */
+
+.name-note {
+  font-size: 12px;
+  color: #888;
+  margin: 5px 0 15px;
 }
