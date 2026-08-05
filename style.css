@@ -1283,17 +1283,21 @@ body::before {
   pointer-events: none;
 }
 
+/* 曲名入力エリア */
+.song-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* 曲名予測変換（サジェスト表示） */
 
 .song-input-area {
   position: relative;
-  width: 100%;
-  margin: 0 auto;
+  display: inline-block;
 }
 
-
 .song-input-area input {
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -1304,14 +1308,19 @@ body::before {
   left: 0;
   width: 100%;
   box-sizing: border-box;
+
   background: white;
   z-index: 100;
+
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 
 .song-suggest-item {
   padding: 8px;
   cursor: pointer;
+  text-align: left;
 }
 
 
