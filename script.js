@@ -508,15 +508,15 @@ if(!keyword){
 
 
 
-    const results = [
+const results = [
 
   ...songs.filter(song =>
-    normalizeSongText(song).startsWith(keyword)
+    song.search.startsWith(keyword)
   ),
 
   ...songs.filter(song =>
-    !normalizeSongText(song).startsWith(keyword) &&
-    normalizeSongText(song).includes(keyword)
+    !song.search.startsWith(keyword) &&
+    song.search.includes(keyword)
   )
 
 ];
@@ -534,15 +534,14 @@ results.forEach(song => {
 
 
       item.textContent =
-      song;
-
+      song.name;
 
 
       item.onclick = function(){
 
 
         input.value =
-        song;
+        song.name;
 
 
         suggest.innerHTML =
