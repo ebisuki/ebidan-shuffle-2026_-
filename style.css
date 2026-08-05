@@ -1273,3 +1273,12 @@ body::before {
   color: #888;
   margin: 5px 0 15px;
 }
+
+/* メンバー画像の保存対策 */
+.member-card img,
+.result-member img,
+.ranking-item img {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
