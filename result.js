@@ -178,10 +178,10 @@ for(let j = 0; j < 9; j++){
 
 const member =
 memberList[j];
-console.log(member.image);
-
 
 if(member){
+
+  console.log(member.image);
 
 
 members +=
