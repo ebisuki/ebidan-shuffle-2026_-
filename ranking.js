@@ -170,7 +170,8 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
       </span>
 
 
-      <img src="${info.image}">
+      <img src="${info.image}"
+      draggable="false">
 
 
       <span class="ranking-name">
