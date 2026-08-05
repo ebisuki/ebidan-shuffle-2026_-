@@ -270,7 +270,6 @@ saveArea.innerHTML = html;
 
 async function saveImage(){
 
-
 createSaveImageArea();
 
 
@@ -344,6 +343,26 @@ link.click();
 
 });
 
+
+}
+
+// =====================
+// Xシェア
+// =====================
+
+function shareX(){
+
+  const text =
+"👑 EBiDAN THE LIVE 2026\n🎯 シャッフルユニット予想してみた！\n\n#EBiDAN #Yes_EBiDAN15th #エビライ2026 #EBiDANシャッフル大予想";
+
+  const siteURL =
+"https://ebisuki.github.io/ebidan-shuffle-2026_-/";
+
+  const url =
+"https://twitter.com/intent/tweet?text=" +
+encodeURIComponent(text + "\n\n" + siteURL);
+
+  window.open(url, "_blank");
 
 }
 
