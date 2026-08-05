@@ -255,7 +255,7 @@ if(songArea){
 
 
       submitMessage.innerHTML =
-      `あと ${9 - completeUnits} ユニット完成させてね✨`;
+      `あと ${9 - completeUnits} ユニット残ってるよ✨`;
 
 submitButton.classList.add("disabled");
     }else{
