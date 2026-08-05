@@ -165,6 +165,25 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
 const unit =
 unitData[`unit${i}`];
 
+const songList =
+(data.songs || []).filter(song => song);
+
+let songs = "";
+
+if(songList.length === 0){
+
+  songs = "未選択";
+
+}else if(songList.length === 1){
+
+  songs = `🎵 ${songList[0]}`;
+
+}else{
+
+  songs =
+  `🎵 ${songList[0]}<br>🎵 ${songList[1]}`;
+
+}
 
 let members = "";
 
@@ -232,6 +251,11 @@ html +=
 ${unit.name}
 </h2>
 
+<div class="save-song">
+
+${songs}
+
+</div>
 
 <div class="save-member-grid">
 

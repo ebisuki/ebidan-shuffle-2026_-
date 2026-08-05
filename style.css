@@ -1327,3 +1327,17 @@ body::before {
 .song-suggest-item:hover {
   background: #f5f5f5;
 }
+
+.save-song{
+
+  margin: 4px 0 10px;
+
+  text-align: center;
+
+  font-size: 12px;
+
+  color: #666;
+
+  font-weight: 500;
+
+}
