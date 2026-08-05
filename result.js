@@ -45,7 +45,8 @@ members +=
 <div class="result-member">
 
 <img 
-src="${member.image}">
+src="${member.image}"
+draggable="false">
 
 <p>
 ${member.name}
