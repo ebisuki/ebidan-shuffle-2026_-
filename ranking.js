@@ -1,4 +1,12 @@
-window.onload = function(){
+import { db } from "./firebase.js";
+
+import {
+  collection,
+  getDocs
+}
+from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
+window.onload = async function(){
 
 
 const rankingArea =
@@ -9,6 +17,40 @@ let html = "";
 
 
 
+const snapshot =
+await getDocs(
+  collection(db,"predictions")
+);
+
+
+const allPredictions = [];
+
+
+snapshot.forEach(doc => {
+
+  allPredictions.push(
+    doc.data()
+  );
+
+});
+
+
+console.log(
+  "集計対象データ:",
+  allPredictions
+);
+
+const totalVotes =
+document.getElementById("total-votes");
+
+
+if(totalVotes){
+
+  totalVotes.innerHTML =
+  `🌟 現在 ${allPredictions.length} 件の予想が集まっています！`;
+
+}
+
 // =====================
 // ユニット別集計
 // =====================
@@ -16,12 +58,15 @@ let html = "";
 for(let i = 1; i <= 9; i++){
 
 
-  const data =
-JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
-  members: [],
-  songs: []
-};
+const unitDataList =
+allPredictions.map(prediction => {
 
+  return prediction[`unit${i}`] || {
+    members: [],
+    songs: []
+  };
+
+});
 
   const unit =
   unitData[`unit${i}`];
@@ -41,16 +86,17 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
   // =====================
 
 
-  const members =
-  data.members || data;
+unitDataList.forEach(data => {
 
+
+  const members =
+  data.members || [];
 
 
   members.forEach(member => {
 
 
     const id = member.id;
-
 
 
     if(memberCount[id]){
@@ -82,6 +128,9 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
   });
 
 
+});
+
+
 
 
 
@@ -90,28 +139,35 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
   // =====================
 
 
-  if(data.songs){
+  unitDataList.forEach(data => {
 
 
-    data.songs.forEach(song=>{
+  const songs =
+  data.songs || [];
 
 
-      if(songCount[song]){
-
-        songCount[song]++;
+  songs.forEach(song=>{
 
 
-      }else{
-
-        songCount[song] = 1;
-
-      }
+    if(songCount[song]){
 
 
-    });
+      songCount[song]++;
 
 
-  }
+    }else{
+
+
+      songCount[song] = 1;
+
+
+    }
+
+
+  });
+
+
+});
 
 
 
@@ -152,12 +208,18 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
 
 
 
-  memberRanking.forEach((member,index)=>{
+  for(let i = 0; i < 10; i++){
+
+
+  const member =
+  memberRanking[i];
+
+
+  if(member){
 
 
     const info =
     memberInfo[member[0]];
-
 
 
     memberHTML += `
@@ -166,7 +228,7 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
 
 
       <span>
-      ${index+1}位
+      ${i+1}位
       </span>
 
 
@@ -175,7 +237,7 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
 
 
       <span class="ranking-name">
-      ${info.name}（${info.group}）
+      ${info.name}
       </span>
 
 
@@ -186,11 +248,41 @@ JSON.parse(localStorage.getItem(`unit${i}Members`)) || {
 
     </div>
 
+    `;
+
+
+  }else{
+
+
+    memberHTML += `
+
+    <div class="ranking-item">
+
+
+      <span>
+      ${i+1}位
+      </span>
+
+
+      <span class="ranking-name">
+      -
+      </span>
+
+
+      <span class="ranking-vote">
+      -票
+      </span>
+
+
+    </div>
 
     `;
 
 
-  });
+  }
+
+
+}
 
 
 

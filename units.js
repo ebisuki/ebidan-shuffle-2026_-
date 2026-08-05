@@ -1,3 +1,11 @@
+import { db, auth } from "./firebase.js";
+
+import {
+  doc,
+  setDoc
+}
+from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+
 let completeUnits = 0;
 
 
@@ -269,14 +277,75 @@ submitButton.classList.add("disabled");
 
 
 
-    submitButton.onclick = function(){
+    submitButton.onclick = async function(){
 
 
-      location.href = "result.html";
+  const user =
+  auth.currentUser;
 
 
+  if(!user){
+
+    alert("ユーザー情報を取得できませんでした");
+
+    return;
+
+  }
+
+
+
+  const saveData = {};
+
+
+
+  for(let i = 1; i <= 9; i++){
+
+
+    const data =
+    JSON.parse(
+      localStorage.getItem(`unit${i}Members`)
+    ) || {
+      members: [],
+      songs: []
     };
 
+
+    saveData[`unit${i}`] = data;
+
+
+  }
+
+
+
+
+
+  await setDoc(
+
+    doc(
+      db,
+      "predictions",
+      user.uid
+    ),
+
+    {
+
+      ...saveData,
+
+      updatedAt:
+      new Date()
+
+    }
+
+
+  );
+
+
+
+  location.href =
+  "result.html";
+
+
+};
 
   }
 

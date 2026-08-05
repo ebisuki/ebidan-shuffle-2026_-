@@ -566,8 +566,6 @@ results.forEach(song => {
 }
 
 
-
-
 window.addEventListener("load", function(){
 
 
