@@ -209,13 +209,15 @@ members +=
 `
 <div class="save-member">
 
-
 <img
 src="${member.image}"
 class="save-member-image"
 width="55"
 height="55">
 
+<div class="save-member-name">
+${member.name}
+</div>
 
 </div>
 `;
