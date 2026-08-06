@@ -1183,7 +1183,9 @@ body::before {
 
   display:flex;
 
-  justify-content:center;
+  flex-direction:column;
+
+  justify-content:flex-start;
 
   align-items:center;
 
@@ -1341,7 +1343,6 @@ body::before {
   font-weight: 500;
 
 }
-
 
 
 .save-member-name{
