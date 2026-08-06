@@ -1129,7 +1129,7 @@ body::before {
 
 
 
-#save-image-area .save-unit {
+##save-image-area .save-unit {
 
   background:rgb(237, 236, 236);
 
@@ -1137,12 +1137,11 @@ body::before {
 
   padding:10px;
 
-  min-height:260px;
+  min-height:245px;
 
   box-sizing:border-box;
 
 }
-
 
 
 /* ユニット名 */
@@ -1181,13 +1180,7 @@ body::before {
 
 #save-image-area .save-member {
 
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:flex-start;
-
-  align-items:center;
+  text-align: center;
 
 }
 
