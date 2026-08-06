@@ -338,13 +338,13 @@ img.onerror = resolve;
 
 html2canvas(area, {
 
-  scale:2,
+  scale: window.devicePixelRatio * 2,
 
-  backgroundColor:null,
+  backgroundColor: null,
 
-  useCORS:false,
+  useCORS: false,
 
-  allowTaint:true
+  allowTaint: true
 
 })
 
