@@ -11,7 +11,7 @@ body {
 
   margin: 0;
 
-  padding: 30px 20px;
+  padding: 10px 20px 20px;
 
   font-family:
   "Arial",
@@ -37,9 +37,9 @@ h1 {
 
   font-size:28px;
 
-  line-height:1.5;
+  line-height:1.3;
 
-  margin-top:50px;
+  margin:10px 0 5px;
 
   color:#333;
 
@@ -49,7 +49,7 @@ h1 {
 
 p {
 
-  margin:10px 0;
+  margin:5px 0;
 
   font-size:16px;
 
@@ -199,9 +199,11 @@ button:hover {
 
 .empty-slot {
 
-  width:90px;
+  flex:0 0 70px;
 
-  height:120px;
+  width:70px;
+
+  height:92px;
 
   border:
   2px dashed #ddd;
@@ -234,14 +236,27 @@ a {
 
 .selected-grid {
 
-  display:grid;
+  display:flex;
 
-  grid-template-columns:
-  repeat(3,90px);
+  gap:8px;
 
-  gap:15px;
+  justify-content:flex-start;
 
-  justify-content:center;
+  overflow-x:auto;
+
+  overflow-y:hidden;
+
+  padding:4px 2px 8px;
+
+  -webkit-overflow-scrolling:touch;
+
+  scrollbar-width:none;
+
+}
+
+.selected-grid::-webkit-scrollbar {
+
+  display:none;
 
 }
 
@@ -249,11 +264,13 @@ a {
 
 .selected-grid .member-card {
 
-  width:90px;
+  flex:0 0 70px;
 
-  height:120px;
+  width:70px;
 
-  padding:5px;
+  height:92px;
+
+  padding:4px;
 
 }
 
@@ -263,7 +280,7 @@ a {
 
   width:100%;
 
-  height:70px;
+  height:55px;
 
   object-fit:cover;
 
@@ -1379,3 +1396,34 @@ body::before {
   white-space:nowrap;
 
 }
+
+
+/* =====================
+   上部固定
+===================== */
+
+.unit-fixed-area {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+
+  margin-left: -20px;
+  margin-right: -20px;
+
+  padding: 5px 20px 10px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #fff5fb,
+    #f5f8ff
+  );
+
+  box-shadow:
+  0 4px 10px rgba(0,0,0,0.08);
+
+}
+

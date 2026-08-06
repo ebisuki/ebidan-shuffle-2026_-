@@ -596,3 +596,33 @@ window.addEventListener("load", function(){
 
 
 });
+
+
+// =========================
+// 候補を外クリックで閉じる
+// =========================
+
+document.addEventListener("click", function(event){
+
+  const songInputAreas =
+  document.querySelectorAll(".song-input-area");
+
+  songInputAreas.forEach(area => {
+
+    if(!area.contains(event.target)){
+
+      const suggest =
+      area.querySelector(".song-suggestions");
+
+      if(suggest){
+
+        suggest.innerHTML = "";
+        suggest.classList.remove("active");
+
+      }
+
+    }
+
+  });
+
+});
