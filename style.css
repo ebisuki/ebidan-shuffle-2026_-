@@ -1180,10 +1180,13 @@ body::before {
 
 #save-image-area .save-member {
 
-  text-align: center;
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
 
 }
-
 
 
 /* 空枠 */
