@@ -1,650 +1,808 @@
 const songData = {
 
   "超特急":[
-    {
-      name:"TRAIN",
-      search:"train"
-    },
-    {
-      name:"No More Cry",
-      search:"nomorecry"
-    },
-    {
-      name:"Shake body",
-      search:"shakebody"
-    },
-    {
-      name:"Secret Express",
-      search:"secretexpress"
-    },
-    {
-      name:"panipani",
-      search:"panipani"
-    },
-    {
-      name:"Drive on week",
-      search:"driveonweek"
-    },
-    {
-      name:"FLASHBACK",
-      search:"flashback"
-    },
-    {
-      name:"Bloody Night",
-      search:"bloodynight"
-    },
-    {
-      name:"Make it hot！",
-      search:"makeithot"
-    },
-    {
-      name:"Keyword",
-      search:"keyword"
-    },
-    {
-      name:"Starlight",
-      search:"starlight"
-    },
-    {
-      name:"Kiss Me Baby",
-      search:"kissmebaby"
-    },
-    {
-      name:"No.1",
-      search:"no1"
-    },
-    {
-      name:"走れ!!!!超特急",
-      search:"走れ超特急"
-    },
-    {
-      name:"Rush Hour",
-      search:"rushhour"
-    },
-    {
-      name:"Believe×Believe",
-      search:"believebelieve"
-    },
-    {
-      name:"We Can Do It!",
-      search:"wecandoit"
-    },
-    {
-      name:"Star Gear",
-      search:"stargear"
-    },
-    {
-      name:"EBiDAY EBiNAI",
-      search:"ebidayebinai"
-    },
-    {
-      name:"SURVIVOR",
-      search:"survivor"
-    },
-    {
-      name:"Superstar",
-      search:"superstar"
-    },
-    {
-      name:"ikki!!!!!i!!",
-      search:"ikkii"
-    },
-    {
-      name:"Billion Beats",
-      search:"billionbeats"
-    },
-    {
-      name:"What's going on?",
-      search:"whatsgoingon"
-    },
-    {
-      name:"Time Wave",
-      search:"timewave"
-    },
-    {
-      name:"Gravitation",
-      search:"gravitation"
-    },
-    {
-      name:"Bye Bye Bye",
-      search:"byebyebye"
-    },
-    {
-      name:"STYLE",
-      search:"style"
-    },
-    {
-      name:"Signal",
-      search:"signal"
-    },
-    {
-      name:"One Life",
-      search:"onelife"
-    },
-    {
-      name:"Snow Break",
-      search:"snowbreak"
-    },
-    {
-      name:"POLICEMEN",
-      search:"policemen"
-    },
-    {
-      name:"熱くなれ！",
-      search:"熱くなれ"
-    },
-    {
-      name:"クラ☆クラ",
-      search:"クラクラ"
-    },
-    {
-      name:"Burn!",
-      search:"burn"
-    },
-    {
-      name:"Beautiful Chaser",
-      search:"beautifulchaser"
-    },
-    {
-      name:"HOPE STEP JUMP",
-      search:"hopestepjump"
-    },
-    {
-      name:"fanfare",
-      search:"fanfare"
-    },
-    {
-      name:"One/O Signal",
-      search:"oneosignal"
-    },
-    {
-      name:"Yell",
-      search:"yell"
-    },
-    {
-      name:"OVER DRIVE",
-      search:"overdrive"
-    },
-    {
-      name:"Turn Up",
-      search:"turnup"
-    },
-    {
-      name:"Synchronism",
-      search:"synchronism"
-    },
-    {
-      name:"Seventh Heaven",
-      search:"seventhheaven"
-    },
-    {
-      name:"バッタマン",
-      search:"バッタマン"
-    },
-    {
-      name:"超えてアバンチュール",
-      search:"超えてアバンチュール"
-    },
-    {
-      name:"LIBIDO",
-      search:"libido"
-    },
-    {
-      name:"スターダストLOVE TRAIN",
-      search:"スターダストlovetrain"
-    },
-    {
-      name:"Beasty Spider",
-      search:"beastyspider"
-    },
-    {
-      name:"Whiteout",
-      search:"whiteout"
-    },
-    {
-      name:"Peace of LOVE",
-      search:"peaceoflove"
-    },
-    {
-      name:"ライオンライフ",
-      search:"ライオンライフ"
-    },
-    {
-      name:"Clap Our Hands!",
-      search:"clapourhands"
-    },
-    {
-      name:"Always You",
-      search:"alwaysyou"
-    },
-    {
-      name:"超ネバギバDANCE",
-      search:"超ネバギバdance"
-    },
-    {
-      name:"gr8est journey",
-      search:"gr8estjourney"
-    },
-    {
-      name:"PAPAPAPA JUMPERS",
-      search:"papapapajumpers"
-    },
-    {
-      name:"Fantasy Love Train 〜君の元までつながるRail〜",
-      search:"fantasylovetrain"
-    },
-    {
-      name:"My Buddy",
-      search:"mybuddy"
-    },
-    {
-      name:"浮つきWAVES",
-      search:"浮つきwaves"
-    },
-    {
-      name:"UNKNOWN…",
-      search:"unknown"
-    },
-    {
-      name:"a kind of love",
-      search:"akindoflove"
-    },
-    {
-      name:"Party Maker",
-      search:"partymaker"
-    },
-    {
-      name:"Feel the light",
-      search:"feelthelight"
-    },
-    {
-      name:"SAY NO",
-      search:"sayno"
-    },
-    {
-      name:"Jesus",
-      search:"jesus"
-    },
-    {
-      name:"up to you",
-      search:"uptoyou"
-    },
-    {
-      name:"Fashion",
-      search:"fashion"
-    },
-    {
-      name:"超越マイウェイ",
-      search:"超越マイウェイ"
-    },
-    {
-      name:"SAIKOU KOUSHIN",
-      search:"saikoukoushin"
-    },
-    {
-      name:"need you",
-      search:"needyou"
-    },
-    {
-      name:"Booster",
-      search:"booster"
-    },
-    {
-      name:"ขอเสียงหน่อย",
-      search:"ขอเสียงหน่อย"
-    },
-    {
-      name:"霖雨",
-      search:"霖雨"
-    },
-    {
-      name:"満月",
-      search:"満月"
-    },
-    {
-      name:"PUMP ME UP",
-      search:"pumpmeup"
-    },
-    {
-      name:"You know, I know",
-      search:"youknowiknow"
-    },
-    {
-      name:"8号車との歌",
-      search:"8号車との歌"
-    },
-    {
-      name:"Time of GOLD",
-      search:"timeofgold"
-    },
-    {
-      name:"インオキナワ",
-      search:"インオキナワ"
-    },
-    {
-      name:"ツンデレチビ王子",
-      search:"ツンデレチビ王子"
-    },
-    {
-      name:"ソレイユ",
-      search:"ソレイユ"
-    },
-    {
-      name:"Hey Hey Hey",
-      search:"heyheyhey"
-    },
-    {
-      name:"Drawイッパツ",
-      search:"drawイッパツ"
-    },
-    {
-      name:"Before Dawn",
-      search:"beforedawn"
-    },
-    {
-      name:"激おこスティックファイナリアリティぷんぷんドリームわ～るど",
-      search:"激おこスティックファイナリアリティぷんぷんドリームわーるど"
-    },
-    {
-      name:"Four Seasons",
-      search:"fourseasons"
-    },
-    {
-      name:"Play Back",
-      search:"playback"
-    },
-    {
-      name:"TAXI",
-      search:"taxi"
-    },
-    {
-      name:"小さな光",
-      search:"小さな光"
-    },
-    {
-      name:"Revival Love",
-      search:"revivallove"
-    },
-    {
-      name:"Don't Stop 恋",
-      search:"dontstop恋"
-    },
-    {
-      name:"Body Rock",
-      search:"bodyrock"
-    },
-    {
-      name:"Sweet Bell",
-      search:"sweetbell"
-    },
-    {
-      name:"On & On",
-      search:"onandon"
-    },
-    {
-      name:"Stand up",
-      search:"standup"
-    },
-    {
-      name:"#いいね",
-      search:"いいね"
-    },
-    {
-      name:"Table Manners",
-      search:"tablemanners"
-    },
-    {
-      name:"Dear My グッバイ",
-      search:"dearmygoodbye"
-    },
-    {
-      name:"Asayake",
-      search:"asayake"
-    },
-    {
-      name:"Fantasista",
-      search:"fantasista"
-    },
-    {
-      name:"キズナアルゴリズム",
-      search:"キズナアルゴリズム"
-    },
-    {
-      name:"What's up!?",
-      search:"whatsup"
-    },
-    {
-      name:"Hero",
-      search:"hero"
-    },
-    {
-      name:"Guilty",
-      search:"guilty"
-    },
-    {
-      name:"CARNAVAL",
-      search:"carnaval"
-    },
-    {
-      name:"같이 가자",
-      search:"같이가자"
-    },
-    {
-      name:"Yodelic Fire",
-      search:"yodelicfire"
-    },
-    {
-      name:"Sonrisa",
-      search:"sonrisa"
-    },
-    {
-      name:"荣光",
-      search:"荣光"
-    },
-    {
-      name:"Magnifique",
-      search:"magnifique"
-    },
-    {
-      name:"Cead Mile Failte",
-      search:"ceadmilefailte"
-    },
-    {
-      name:"大大大地",
-      search:"大大大地"
-    },
-    {
-      name:"Holtasoley",
-      search:"holtasoley"
-    },
-    {
-      name:"Dance Dance Dancing！",
-      search:"dancedancedancing"
-    },
-    {
-      name:"Te quiero mucho",
-      search:"tequieromucho"
-    },
-    {
-      name:"You Don't Care",
-      search:"youdontcare"
-    },
-    {
-      name:"クレッシェンド",
-      search:"クレッシェンド"
-    },
-    {
-      name:"ウサギミック",
-      search:"ウサギミック"
-    },
-    {
-      name:"宇宙ドライブ",
-      search:"宇宙ドライブ"
-    },
-    {
-      name:"BakaBakka",
-      search:"bakabakka"
-    },
-    {
-      name:"颯爽とハローマイラヴ",
-      search:"颯爽とハローマイラヴ"
-    },
-    {
-      name:"Re-TRAIN",
-      search:"retrain"
-    },
-    {
-      name:"きみとシンギュラリティ",
-      search:"きみとシンギュラリティ"
-    },
-    {
-      name:"NEW WORLD",
-      search:"newworld"
-    },
-    {
-      name:"MORA MORA",
-      search:"moramora"
-    },
-    {
-      name:"KNOCK U DOWN",
-      search:"knockudown"
-    },
-    {
-      name:"Thinking of You",
-      search:"thinkingofyou"
-    },
-    {
-      name:"シャンディ",
-      search:"シャンディ"
-    },
-    {
-      name:"Winning Run",
-      search:"winningrun"
-    },
-    {
-      name:"ラキラキ",
-      search:"ラキラキ"
-    },
-    {
-      name:"Typhoon",
-      search:"typhoon"
-    },
-    {
-      name:"Together As One",
-      search:"togetherasone"
-    },
-    {
-      name:"君と、奏で",
-      search:"君と奏で"
-    },
-    {
-      name:"Call My Name",
-      search:"callmyname"
-    },
-    {
-      name:"Lesson II",
-      search:"lesson2"
-    },
-    {
-      name:"Steal a Kiss",
-      search:"stealakiss"
-    },
-    {
-      name:"MEMORIAる",
-      search:"memoriaる"
-    },
-    {
-      name:"Love Song",
-      search:"lovesong"
-    },
-    {
-      name:"ジュブナイラー",
-      search:"ジュブナイラー"
-    },
-    {
-      name:"Spice",
-      search:"spice"
-    },
-    {
-      name:"星屑のダンスフロア",
-      search:"星屑のダンスフロア"
-    },
-    {
-      name:"Countdown",
-      search:"countdown"
-    },
-    {
-      name:"AwA AwA",
-      search:"awaawa"
-    },
-    {
-      name:"クリスマス・イブ",
-      search:"クリスマスイブ"
-    },
-    {
-      name:"JOKER FACE",
-      search:"jokerface"
-    },
-    {
-      name:"踊ライナー",
-      search:"踊ライナー"
-    },
-    {
-      name:"キャラメルハート",
-      search:"キャラメルハート"
-    },
-    {
-      name:"メタルなかよし",
-      search:"メタルなかよし"
-    },
-    {
-      name:"Velvet Venom",
-      search:"velvetvenom"
-    },
-    {
-      name:"Big Ta-Da!",
-      search:"bigtada"
-    },
-    {
-      name:"Ready？",
-      search:"ready"
-    },
-    {
-      name:"EVE",
-      search:"eve"
-    },
-    {
-      name:"NINE LIVES",
-      search:"ninelives"
-    },
-    {
-      name:"ウインクキラー",
-      search:"ウインクキラー"
-    },
-    {
-      name:"スピカ",
-      search:"スピカ"
-    },
-    {
-      name:"REAL",
-      search:"real"
-    },
-    {
-      name:"POKER FACE",
-      search:"pokerface"
-    },
-    {
-      name:"ガチ夢中！",
-      search:"ガチ夢中"
-    },
-    {
-      name:"C'est la vie",
-      search:"cestlavie"
-    },
-    {
-      name:"STEP BY STEP",
-      search:"stepbystep"
-    }
+"TRAIN",
+"No More Cry",
+"Shake body",
+"Secret Express",
+"panipani",
+"Drive on week",
+"FLASHBACK",
+"Bloody Night",
+"Make it hot！",
+"Keyword",
+"Starlight",
+"Kiss Me Baby",
+"No.1",
+"走れ!!!!超特急",
+"Rush Hour",
+"Believe×Believe",
+"We Can Do It!",
+"Star Gear",
+"EBiDAY EBiNAI",
+"SURVIVOR",
+"Superstar",
+"ikki!!!!!i!!",
+"Billion Beats",
+"What's going on?",
+"Time Wave",
+"Gravitation",
+"Bye Bye Bye",
+"STYLE",
+"Signal",
+"One Life",
+"Snow Break",
+"POLICEMEN",
+"熱くなれ！",
+"クラ☆クラ",
+"Burn!",
+"Beautiful Chaser",
+"HOPE STEP JUMP",
+"fanfare",
+"One/O Signal",
+"Yell",
+"OVER DRIVE",
+"Turn Up",
+"Synchronism",
+"Seventh Heaven",
+"バッタマン",
+"超えてアバンチュール",
+"LIBIDO",
+"スターダストLOVE TRAIN",
+"Beasty Spider",
+"Whiteout",
+"Peace of LOVE",
+"ライオンライフ",
+"Clap Our Hands!",
+"Always You",
+"超ネバギバDANCE",
+"gr8est journey",
+"PAPAPAPA JUMPERS",
+"Fantasy Love Train 〜君の元までつながるRail〜",
+"My Buddy",
+"浮つきWAVES",
+"UNKNOWN…",
+"a kind of love",
+"Party Maker",
+"Feel the light",
+"SAY NO",
+"Jesus",
+"up to you",
+"Fashion",
+"超越マイウェイ",
+"SAIKOU KOUSHIN",
+"need you",
+"Booster",
+"ขอเสียงหน่อย",
+"霖雨",
+"満月",
+"PUMP ME UP",
+"You know, I know",
+"8号車との歌",
+"Time of GOLD",
+"インオキナワ",
+"ツンデレチビ王子",
+"ソレイユ",
+"Hey Hey Hey",
+"Drawイッパツ",
+"Before Dawn",
+"激おこスティックファイナリアリティぷんぷんドリームわ～るど",
+"Four Seasons",
+"Play Back",
+"TAXI",
+"小さな光",
+"Revival Love",
+"Don't Stop 恋",
+"Body Rock",
+"Sweet Bell",
+"On & On",
+"Stand up",
+"#いいね",
+"Table Manners",
+"Dear My グッバイ",
+"Asayake",
+"Fantasista",
+"キズナアルゴリズム",
+"What's up!?",
+"Hero",
+"Guilty",
+"CARNAVAL",
+"같이 가자",
+"Yodelic Fire",
+"Sonrisa",
+"荣光",
+"Magnifique",
+"Cead Mile Failte",
+"大大大地",
+"Holtasoley",
+"Dance Dance Dancing！",
+"Te quiero mucho",
+"You Don't Care",
+"クレッシェンド",
+"ウサギミック",
+"宇宙ドライブ",
+"BakaBakka",
+"颯爽とハローマイラヴ",
+"Re-TRAIN",
+"きみとシンギュラリティ",
+"NEW WORLD",
+"MORA MORA",
+"KNOCK U DOWN",
+"Thinking of You",
+"シャンディ",
+"Winning Run",
+"ラキラキ",
+"Typhoon",
+"Together As One",
+"君と、奏で",
+"Call My Name",
+"Lesson II",
+"Steal a Kiss",
+"MEMORIAる",
+"Love Song",
+"ジュブナイラー",
+"Spice",
+"星屑のダンスフロア",
+"Countdown",
+"AwA AwA",
+"クリスマス・イブ",
+"JOKER FACE",
+"踊ライナー",
+"キャラメルハート",
+"メタルなかよし",
+"Velvet Venom",
+"Big Ta-Da!",
+"Ready？",
+"EVE",
+"NINE LIVES",
+"ウインクキラー",
+"スピカ",
+"REAL",
+"POKER FACE",
+"ガチ夢中！",
+"C'est la vie",
+"STEP BY STEP"
+  ],
+
+  "M!LK":[
+"｢好きだ!｣っていえない",
+"Amore〜僕は君に愛を叫ぶ〜",
+"Around The World",
+"Bad Liar",
+"Banzai",
+"Brave Saga",
+"Buffalo Shuffle",
+"DEAR LIFE",
+"Diary",
+"Don't think, Jump!",
+"energy",
+"ERA",
+"Feel Alive",
+"give you",
+"gkbr",
+"Goin' Down",
+"Good Morning Mr.Misstake",
+"Gotta Get Up",
+"HEADBANG!",
+"HIKARI",
+"HOME",
+"I CAN DRINK",
+"INFINITY TRY",
+"It's only LOVE",
+"Kiss Plan",
+"last moment",
+"Lost and found-am 0:00-",
+"Love Drive",
+"LUCKY CALL",
+"MAGIC CARPET",
+"May",
+"Message",
+"Milky Snow",
+"miruku!",
+"My Treasure",
+"Now Story",
+"On your mark",
+"Ordinary-最高の退屈-",
+"Over The Storm",
+"Ribbon",
+"SAY YEAH",
+"SDR",
+"Searchlight-僕らが僕らになる方法-",
+"Sparkle",
+"Special Thanx",
+"STARS",
+"Theme of Juvenilizm-青春主義-",
+"TOUCH THE SUN",
+"wan",
+"We're Here!!!",
+"Weekend",
+"Winding Road",
+"You!Joy!Parade!",
+"アイドルパワー",
+"アオノオト",
+"イイじゃん",
+"イチニノサン",
+"エビバディグッジョブ!",
+"おもちゃのつるぎ",
+"かすかに、君だった。",
+"クレッシェンド",
+"ゲンキデスカ?",
+"コーヒーが飲めません",
+"サマーガンバ!!",
+"サラブレッド御曹司 CITY BOY",
+"サンキュー!N・D・K!",
+"シアワシェイク",
+"ジャングリズム",
+"チラチLOVE",
+"テルネロファイター",
+"テレパシー",
+"パッパラ・シュビドゥ・ヴァァァァァァァ",
+"ハナキン!",
+"ハピダン",
+"ハロー!",
+"ピースサイン",
+"ブルーシャワー",
+"フレ!フレ!オレ!",
+"ブンブンブン",
+"ボクノアカシ",
+"ボクラなりレボリューション",
+"まちあわせ",
+"まっしろサンライズ",
+"めちゃモル",
+"リンガベル",
+"愛と合図",
+"逢い",
+"宇宙ジャンボリー",
+"何処へ",
+"夏味ランデブー",
+"完全S・S・D!",
+"奇跡が空に恋を響かせた",
+"君がくれた宝物ならココにある",
+"君とスクロール",
+"君の知らない世界へ",
+"月明かりの透明",
+"嫌い",
+"交差点、信号、君と僕",
+"好きすぎて滅!",
+"行けたら行くよ",
+"最愛",
+"桜咲く頃には",
+"疾走ペンデュラム",
+"上昇思考クライマー",
+"新学期アラカルト",
+"晴れのち曇り時々虹",
+"男子スイーツ部発足します",
+"白黒Brand New World",
+"爆裂愛してる",
+"反抗期アバンチュール",
+"風が吹く/S.O.S！〜sound of smile〜",
+"僕の枕ちょーだいっ!",
+"夢路",
+"妄想ドン・キホーテ",
+"夜明け",
+"約束",
+"恋がはじまる"
+  ],
+
+  "SUPER★DRAGON":[
+"+IKUZE+",
+"After the summer night",
+"AIKOTOBA",
+"Are U Ready?",
+"ARIGATO",
+"BAD BOY",
+"Bad Day",
+"BADASS",
+"BIG DIPPER / feat. UDANJI ICHIKAWA",
+"BLACK BOX",
+"BLOODY LOVE",
+"Brand New Music",
+"Break off",
+"Breakdown Anthem",
+"Bring Back",
+"BROTHERHOOD",
+"Burning in the nights",
+"Call Me Asap",
+"CHAPTER1 - X DAY",
+"CHAPTER2 - X point",
+"CHAPTER3 - you X me",
+"CHAPTER4 - SUPER X",
+"City Noise",
+"Concealer",
+"Cross Counter",
+"Cruisin'",
+"Dark Heroes",
+"Distance",
+"Do It",
+"DOG",
+"Don't Let Me Down",
+"Downforce",
+"Dragonfly",
+"Dreamland",
+"Endless Dance",
+"Fingerprints",
+"Get Lite!",
+"GETSUYOUBI",
+"Gotta Keep It Going On",
+"HACK MY CHOICE",
+"Hallucination of Love",
+"Hey, girl",
+"hide-and-seek",
+"Honey Baby",
+"INAZUMA [サンダードラゴン]",
+"Indelible Magic",
+"Jacket",
+"Jungle Gym Kings",
+"KITTO→ZETTAI",
+"La Vida Loca",
+"Legend",
+"love or like (Tokyo) (feat.Anatomy Rabbit)",
+"LRL -Left Right Left-",
+"Mada' Mada'",
+"maybe it's you",
+"MIKAZUKI",
+"Monster!",
+"Mr.GAME",
+"My Playlist",
+"New Game",
+"New Rise",
+"NICHIYOUBI",
+"Not Enough",
+"NPC",
+"NUMBER",
+"Omaejanai",
+"Ooh! Ooh!",
+"PANDORA",
+"PAYAPAYA",
+"Pendulum Beat!",
+"Pioneer (Keep It Real)",
+"Popstar",
+"Pretty Girl",
+"Purple Moon",
+"Reach the sky",
+"Remedy For Love",
+"Revolution",
+"Ringing, Love",
+"SAMURAI",
+"SAWAGE!!!!",
+"Set It Off",
+"SHOPPING TIME",
+"Shut Up, Shout Out",
+"So Woo",
+"Song For You",
+"SOUL FLAG",
+"Strike Up The Band",
+"Summer Breeze",
+"Summer Party",
+"SWEET DEVIL",
+"Sweets",
+"Tap tap tap!",
+"The Survivor",
+"-Tweedia-",
+"Untouchable MAX",
+"WARNING",
+"Welcome to my hell",
+"What a day",
+"WILD BEAT",
+"X",
+"Younger Forevermore",
+"ZEN-SHIN-ZEN-REI",
+"ゲットレジャーニー",
+"ゲラゲラ",
+"ダーリング",
+"やっばい",
+"リトル・ラヴァーズ",
+"リマカブロ！",
+"ワチャ-ガチャ!",
+"雨ノチ晴レ",
+"君は1000%",
+"笑い話",
+"相合傘",
+"夢で逢えたら"
+  ],
+
+  "さくらしめじ":[
+"1・2・3",
+"Bun! Bun! BuuuN!",
+"fragile",
+"Iroto-Ridori",
+"My Sunshine",
+"normal",
+"simple",
+"who!",
+"あやまリズム",
+"いいじゃん",
+"いーでぃーえむ",
+"いくじなし",
+"いつかサヨナラ",
+"イントロダクション",
+"えそらごと",
+"エンディング",
+"おたまじゃくし",
+"おもいでくれよん",
+"お返しの約束",
+"かぜいろのめろでぃー",
+"かぜだより",
+"ガラクタ",
+"きのうのゆめ",
+"ぎふと",
+"きみでした",
+"ケセラセラララ",
+"コトノハ",
+"こんこんずし",
+"さんきゅう",
+"しめじ体操",
+"スタートダッシュ",
+"スタンプ",
+"ストーリーズ (feat.ひらめ)",
+"スパイス",
+"スプーンの初恋 ～あゝ、好きだよベイベー～",
+"せきがえのかみさま",
+"たけのこミサイル",
+"ただ君が",
+"だるまさんがころんだ",
+"てぃーけーじー",
+"でぃすとーしょん",
+"なるため",
+"ねこの16ビート",
+"ハウリング",
+"はじまるきせつ",
+"ひだりむね",
+"ふうせんはなび",
+"ブルースター",
+"またたび",
+"まよなかぴくにっく",
+"みちくさこうしんきょく",
+"ゆめがさめたら",
+"ランドリー",
+"わがままでいたい",
+"英雄のススメ",
+"花びら、始まりを告げて",
+"会いに行こう",
+"菌カツ！",
+"靴底メモリー",
+"合言葉",
+"春が鳴った",
+"辛夷のつぼみ",
+"生きるよ",
+"青春の唄",
+"先に言うね",
+"大好きだったあの子を嫌いになって",
+"朝が来る前に",
+"天つ風",
+"同じ雲の下",
+"届けそこねたラブソング",
+"風とあるがままに今を歩こう",
+"別れた後に僕が思うこと",
+"明日を",
+"夕空小道",
+"恋音と雨空",
+"恋春日和"
+  ],
+
+  "ONE N' ONLY":[
+    "WARAiNA",
+    "10,000miles",
+    "ALL OUT",
+    "Be Alright",
+    "BE FRESH",
+    "Beast Mode",
+    "Beautiful",
+    "Bittersweet",
+    "Bla Bla Bla",
+    "Black Hole",
+    "BLAST",
+    "BOOM BASH",
+    "Breathe",
+    "Burn it out",
+    "Call me",
+    "Category",
+    "C'MON",
+    "Colorful",
+    "Cross the Line",
+    "Dark Knight",
+    "DEJAVU",
+    "Departure",
+    "Destiny",
+    "DOMINO",
+    "Don't worry",
+    "Everything's Changing",
+    "EVOL",
+    "Fiesta",
+    "Fight or Die",
+    "FOCUS",
+    "Freaking Happy",
+    "Free Hug",
+    "FUEGO",
+    "Get That",
+    "GIFT",
+    "Good Day",
+    "Gooey",
+    "HOLIDAY",
+    "Hook Up",
+    "Hunt",
+    "I Don't Know",
+    "I'M SWAG",
+    "JUST LIKE ME",
+    "L.O.C.A",
+    "LA DI DA",
+    "Last Forever",
+    "LUCKY",
+    "LUMINA",
+    "Map of The Mind",
+    "My Love",
+    "New Dip!",
+    "Nice Guy",
+    "Only One For Me",
+    "OPEN",
+    "POP! POP!",
+    "QUEEN",
+    "R.U.S.H",
+    "Reflection",
+    "RIDE",
+    "Ring The Bells",
+    "Samba de Night Fever",
+    "SAVIOR",
+    "Set a Fire",
+    "Sexy Beach Party Yes!!",
+    "Shut Up! BREAKER",
+    "STARLIGHT ～未来ノトビラ～",
+    "Step Up",
+    "TALKIN'",
+    "The Light",
+    "TOKIMEKI",
+    "Too Much",
+    "Turn it up",
+    "Video Chat",
+    "We Just Don't Care",
+    "We'll rise again",
+    "What About This?",
+    "What's Your Favorite?",
+    "You are",
+    "YOU???",
+    "YOUNG BLOOD",
+    "Yum Bite",
+    "Zero to One",
+    "イタズラSummer",
+    "もっと大きな愛で包み込むから…"
+  ],
+
+  "原因は自分にある。":[
+  "545",
+"『誰も知らない歌』",
+"0to1の幻想",
+"Burn Burn Bomb",
+"COUNTDOWN",
+"Foxy Grape",
+"Go to the Moon",
+"GOD 釈迦にHip-Hop",
+"in the Fate",
+"In the Nude",
+"J*O*K*E*R",
+"Joy to the world",
+"Like a Vampire",
+"Lion",
+"LLL",
+"Mania",
+"Mr.Android（feat. izki）",
+"Museum:0",
+"NOW",
+"Operation Ego",
+"Paradox Re:Write",
+"P-P-P-PERO",
+"Q",
+"Run away",
+"Show Time!!",
+"Silence",
+"The Ceremony",
+"THE EMPATHY",
+"Up and Down",
+"アビスと清らな銀世界",
+"カラフるワンダフル",
+"ギミギミラブ",
+"キミヲナクシテ",
+"ケイカクドヲリ",
+"シェイクスピアに学ぶ恋愛定理",
+"ジュトゥブ",
+"スノウダンス",
+"ダイヤモンドリリー",
+"チョコループ",
+"トレモロ",
+"ニヒリズムプリズム",
+"ネバーエンドロール",
+"パラノイドランデブー",
+"ビネットネット",
+"フィナーレ",
+"マルチバース・アドベンチャー",
+"ラベンダー",
+"愛無常",
+"以呂波 feat. fox capture plan",
+"因果応報アンチノミー",
+"嘘から始まる自称系",
+"黄昏よりも早く疾走れ",
+"夏の二等辺大三角形",
+"希望的観測の定義",
+"貴方に溺れて、僕は潤んで。",
+"貴方らしく",
+"結末は次のトラフィックライト",
+"犬と猫とミルクにシュガー",
+"原因は君にもある。",
+"原因は自分にある。",
+"豪雨",
+"桜Ground",
+"疾走",
+"灼けゆく青",
+"小説ならば",
+"推論的に宇宙人",
+"青、その他",
+"多分、僕のソネット",
+"柘榴",
+"半分相逢傘",
+"美しい人",
+"放課後ギュッと",
+"方程式は恋模様",
+"僕らの世界・物語",
+"魔法をかけて",
+"夢に唄えば",
+"夢之相 - イメノアイ",
+"無限シニシズム",
+"鳴らして、シンバル",
+"夜夏",
+"幽かな夜の夢",
+"遊戯的反逆ノススメ",
+"余白のための瘡蓋狂想曲",
+"藍色閃光",
+"蝋燭",
+"嗜好に関する世論調査"
+  ],
+
+  "BUDDiiS":[
+"ALIEN BOY",
+"ALRIGHT",
+"BEAST2",
+"Beautiful",
+"BLUE SODA",
+"Brighter",
+"Brightness ",
+"BUD",
+"CLICK ME",
+"Dear",
+"Dream Love",
+"ENCHANT",
+"Feelink",
+"Glow Gold ",
+"Gotcha",
+"her+art",
+"HONEY",
+"HOT CHEESE",
+"Instinctive Love",
+"Iris",
+"JEALOUS",
+"JUBiiLEE",
+"KISSYOU",
+"Koi to me ",
+"Lack ",
+"LIGHTS",
+"LÖVE ME",
+"Magic",
+"more rain",
+"Mr.Freak Out ",
+"ON & ON",
+"OZ",
+"Palette of Us",
+"PARTY ",
+"R4U",
+"RISE IN LOVE",
+"RUN",
+"Scrip",
+"Season To Bloom",
+"SHINE ON!!",
+"SM:)LE",
+"Sonic",
+"SUNSHINE",
+"The One",
+"To The Top",
+"Under The Sea",
+"Ütopia",
+"WE HIGH",
+"YO HO",
+"キミは都市伝説",
+"クラッシュパラダイス",
+"青炎",
+"偏愛シンドローム"
+  ],
+
+  "ICEx":[
+"8COUNT",
+"BOOM BOOM BOOM",
+"Butterfly Echo",
+"CANDY",
+"CARNIVAL",
+"COUNT DOWN",
+"Cyber Groovin'",
+"Da-Da-Da",
+"Dash and Rush",
+"Destiny",
+"Drive in my Tokyo",
+"FRESH!!",
+"GIFT",
+"Give Me!",
+"Glory Days",
+"HAMIGAKI",
+"Hollywood",
+"It's party time!",
+"listen to your heart",
+"Lost in you",
+"Maniacs",
+"Member Sign",
+"Miracles",
+"Our Story",
+"Play The Music",
+"Retro Toy Pop",
+"Retro Universe",
+"Sunny Road",
+"Sunset Blue",
+"Under Water",
+"We are ICEx!",
+"シブヤ 午後6時",
+"ダイ キ ライ",
+"ナイトフライト",
+"ビリミ",
+"プン☆ジェラ",
+"ロボハ",
+"運命の1ページ",
+"青と白",
+"熱烈ファイヤー(HOTx)",
+"理想郷",
+"恋ソーダ"
+  ],
+
+  "Lienel":[
+"AMAZING WORLD",
+"Awesome day",
+"Beautiful Music",
+"Blown out",
+"Connected",
+"Curry on love",
+"Daisy",
+"Don't look back!",
+"Dreaming Days",
+"Fly High",
+"Go Around The World",
+"kimito",
+"LOVE Communication",
+"Love Me Madly",
+"Love With You",
+"Melty flowers",
+"Mr.Sister",
+"Navy Blue",
+"Neo ROMANTIC",
+"No Limit, No Rules",
+"Over Days",
+"Party Now!",
+"Rock Your Body",
+"Stay tuned",
+"Summer Boy!Summer Girl!",
+"Tokyo Mellow Night",
+"UNKNOWN GROOVE",
+"Watcha Doing",
+"アンチハート",
+"カルマ",
+"きみいろメモリー",
+"ギラサマ",
+"ジュリアの口づけ",
+"じれったいKISS",
+"セカイイチ",
+"フルムーン",
+"ままならない愛",
+"花鳥風月",
+"罪と罰",
+"純情シンドローム",
+"親指☆Evolution！",
+"超絶SUMMERでバカになれ",
+"妄想劇場",
+"恋のFIRE!FIRE!!FIRE!!!",
+"恋は罪ですか?"
   ]
 
 };

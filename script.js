@@ -1,3 +1,4 @@
+
 let selectedMembers = [];
 
 
@@ -473,12 +474,12 @@ function setupSongSuggest(inputId, suggestId){
 
 
   const suggest =
-  document.getElementById(suggestId);
+document.getElementById(suggestId);
 
 
-  if(!input || !suggest){
-    return;
-  }
+if(!input || !suggest){
+  return;
+}
 
 
 
@@ -488,7 +489,23 @@ function setupSongSuggest(inputId, suggestId){
 
 
   const songs =
-  songData[currentGroup] || [];
+(songData[currentGroup] || []).map(song => {
+
+  if(typeof song === "object"){
+
+    return {
+      name: song.name,
+      search: normalizeSongText(song.search || song.name)
+    };
+
+  }
+
+  return {
+    name: song,
+    search: normalizeSongText(song)
+  };
+
+});
 
 
 
@@ -539,16 +556,13 @@ results.forEach(song => {
 
       item.onclick = function(){
 
+  input.value = song.name;
 
-        input.value =
-        song.name;
+  suggest.innerHTML = "";
 
+  suggest.classList.remove("active");
 
-        suggest.innerHTML =
-        "";
-
-
-      };
+};
 
 
 
